@@ -15,7 +15,7 @@ import imutils
 import pytesseract
 import tempfile
 
-pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files\Tesseract-OCR\\tesseract'
+pytesseract.pytesseract.tesseract_cmd = 'Tesseract-OCR\\tesseract'
 
 def extract(image):
     image = imutils.resize(image, width=300 )
