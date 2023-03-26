@@ -66,9 +66,8 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     image_file = st.file_uploader("Upload Image", type=["png","jpg","jpeg"])
-    st.image(image_file,caption="Uploaded Image")
-
     if image_file is not None:
+        st.image(image_file,caption="Uploaded Image")
         tfile = tempfile.NamedTemporaryFile(delete=False)
         tfile.write(image_file.read())
         image = cv2.imread(tfile.name)
